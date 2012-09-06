@@ -17,6 +17,15 @@ class CountryAttributePackage extends Package {
      
     public function install() {
         $pkg = parent::install();
+        /* We install the attribute... */
+        Loader::model('attribute/type');
+        $at = AttributeType::add('country', 'Country', $pkg);
+        /* then we associate with collections and users. */
+        Loader::model('attribute/category');
+        foreach (array('collection', 'user') as $c) {
+            $cat = AttributeKeyCategory::getByHandle($c);
+            $cat->associateAttributeKeyType($at);
+        }
     }
 
     public function upgrade() {
