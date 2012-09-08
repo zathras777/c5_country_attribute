@@ -1,9 +1,9 @@
 <?php
 defined('C5_EXECUTE') or die(_("Access Denied."));
 
-class CountryAttributePackage extends Package {
+class C5CountryAttributePackage extends Package {
 
-     protected $pkgHandle = 'country_attribute';
+     protected $pkgHandle = 'c5_country_attribute';
      protected $appVersionRequired = '5.5.1';
      protected $pkgVersion = '0.1';
 
