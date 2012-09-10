@@ -5,7 +5,7 @@ class C5CountryAttributePackage extends Package {
 
      protected $pkgHandle = 'c5_country_attribute';
      protected $appVersionRequired = '5.5.1';
-     protected $pkgVersion = '0.1';
+     protected $pkgVersion = '0.2';
 
      public function getPackageDescription() {
           return t("Concrete5 attribute type for a country.");
